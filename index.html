@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Lazada</title>
+    <link rel="icon" type="image/x-icon" href="img/lazlogo.jpg">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+
+        @media screen and (max-width: 1000px) {
+          nav {
+            display: none;
+            
+          }
+        }
+
+        .search {
+            display: flex;
+            width: min(700px, 100%);
+        }
+
+        .search input {
+            
+            height: 40px;
+            border: none;
+            background: whitesmoke;
+            width: 100%;
+            font-size: 13px;
+            padding-left: 20px;
+            outline: none;
+        }
+
+        .search button {
+            height: 40px;
+            border: none;
+            background: #f57224; 
+        }
+
+        .search i {
+            color: #fff; 
+            padding: 0 10px;
+        }
+
+        .shop-card {
+          border: none;
+          padding: 5px;
+        }
+
+        .shop-card:hover{
+          cursor: pointer;
+          border: 1px solid rgba(0, 0, 0, 0.5);
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <main class="bg-light">
+        <nav class=" navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid border">
+                <ul class="navbar-nav me-5 mb-2 mb-lg-0 d-flex justify-content-end">
+                  <li class="nav-item me-3">
+                    <a class="nav-link text-primary" href="#" style="font-size: 12px;">FEEDBACK</a>
+                  </li>
+                  <li class="nav-item me-3">
+                    <a class="nav-link" href="#" style="font-size: 12px;">SAVE MORE ON APP</a>
+                  </li>
+                  <li class="nav-item me-3">
+                    <a class="nav-link" href="#" style="font-size: 12px;">SELL ON LAZADA</a>
+                  </li>
+                  <li class="nav-item me-3">
+                    <a class="nav-link" href="#" style="font-size: 12px;">CUSTOMER CARE</a>
+                  </li>
+                  <li class="nav-item me-3">
+                    <a class="nav-link" href="#" style="font-size: 12px;">TRACK MY ORDER</a>
+                  </li>
+                  <li class="nav-item me-3">
+                    <a class="nav-link" href="#" style="font-size: 12px;">LOGIN</a>
+                  </li>
+                  <li class="nav-item me-3">
+                    <a class="nav-link" href="#" style="font-size: 12px;">SIGNUP</a>
+                  </li>
+                </ul>
+            </div>
+        </nav>
+
+        <header class="container-fluid bg-white py-3">
+          <div class="row">
+            <div class=" col-md-3 col-sm-12">
+              <div class="mx-5">
+                <img class="" src="img/logoandlazada.png" height="40px" >
+              </div>
+            </div>
+
+            <div class=" col-md-6 col-sm-12 d-flex">
+              <div class="search me-3">
+                <input type="text" placeholder="Search in Lazada" >
+                <button type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+              </div>
+
+              <div>
+                <a href="#"><img class="" src="img/cart.png" height="40px"></a>
+              </div>
+            </div>
+
+            <div class=" col-md-3 col-sm-12">
+              <div class="mx-5">
+                <a href="#"><img class="" src="img/lazadaloans.jpg" height="30px" ></a>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <section class="container bg-white shadow-sm my-3 py-1" style="border-radius: 15px;">
+          <div class="row">
+            <div class="col">
+              <h6>Topup</h6>
+              <span class="text-muted">Top up & pay bills</span>
+            </div>
+            <div class="col">
+              <h6>LazMall</h6>
+              <sapan class="text-muted">Shop best brands</sapan>
+            </div>
+            <div class="col">
+              <h6>Vouchers</h6>
+              <span class="text-muted">Top up & pay bills</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="container mt-4">
+          <div class="mb-2">
+            <h5>Flash Sale</h5>
+          </div>
+
+          <div class="bg-white py-3 ps-3 pe-2 container-fluid border-dark border-bottom">
+            <div class="row">
+              <div class="col-md-3 col-sm-12">
+                <span class="text-warning">On Sale Now</span>
+              </div>
+              <div class="col-md-6 col-sm-12 d-flex ">
+                <span class="fw-bold me-3">Ending in</span>
+                <div id="countdown">11:59:59</div>
+              </div>
+              <div class="col-md-3 col-sm-12">
+                <button class="btn btn-outline-warning" style="border-radius:0px;">SHOP ALL PRODUCTS</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white container-fluid pt-3">
+            <div class="row ">
+              <div class="col-6 col-md-4 col-lg-2">
+                <div class="shop-card">
+                    <img src="img/pool.jpg" alt="div Image" style="height:200px;width: 100%;object-fit: cover;">
+                    <span class="text-justify">120cm /150cm Swimming Pool Kids Mura Lang Mini </span>
+                    <br>
+                    <div class="my-1">
+                      <span class="text-warning h5">₱362.39</span>
+                    </div>
+                    <span style="font-size: 14px;"><del class="text-muted">₱1,199.00</del>-70%</span>
+                </div>
+              </div>
+  
+              <div class="col-6 col-md-4 col-lg-2">
+                <div class="shop-card">
+                    <img src="img/blouse.jpg" alt="div Image" style="height:200px;width: 100%;object-fit: cover;">
+                    <span class="text-justify">Blouse For Women Short Sleeved T-shirt For</span>
+                    <br>
+                    <div class="my-1">
+                      <span class="text-warning h5">₱142.20</span>
+                    </div>
+                    <span style="font-size: 14px;"><del class="text-muted">₱399.00</del>-64%</span>
+                </div>
+              </div>
+  
+              <div class="col-6 col-md-4 col-lg-2">
+                <div class="shop-card">
+                    <img src="img/pool2.jpg" alt="div Image" style="height:200px;width: 100%;object-fit: cover;">
+                    <span class="text-justify">Outdoor pool children adult family swimming </span>
+                    <br>
+                    <div class="my-1">
+                      <span class="text-warning h5">₱1.00</span>
+                    </div>
+                    <span style="font-size: 14px;"><del class="text-muted">₱699.00</del>-55%</span>
+                </div>
+              </div>
+
+              <div class="col-6 col-md-4 col-lg-2">
+                <div class="shop-card">
+                    <img src="img/portable.jpg" alt="div Image" style="height:200px;width: 100%;object-fit: cover;">
+                    <span class="text-justify">Portable 'K1' Bluetooth Wireless Rechargeable</span>
+                    <br>
+                    <div class="my-1">
+                      <span class="text-warning h5">₱24.07</span>
+                    </div>
+                    <span style="font-size: 14px;"><del class="text-muted">₱264.00</del>-90%</span>
+                </div>
+              </div>
+
+              <div class="col-6 col-md-4 col-lg-2 ">
+                <div class="shop-card">
+                    <img src="img/fan.jpg" alt="div Image" style="height:200px;width: 100%;object-fit: cover;">
+                    <span class="text-justify">Foldable Telescopic Desk Electric Fan Mini Folding </span>
+                    <br>
+                    <div class="my-1">
+                      <span class="text-warning h5">₱64.90</span>
+                    </div>
+                    <span style="font-size: 14px;"><del class="text-muted">₱289.00</del>-78%</span>
+                </div>
+              </div>
+
+              <div class="col-6 col-md-4 col-lg-2">
+                <div class="shop-card">
+                    <img src="img/slippers.jpg" alt="div Image" style="height:200px;width: 100%;object-fit: cover;">
+                    <span class="text-justify">𝐂𝐋𝐎𝐒𝐒.𝐏𝐇 Summer Fashion Men's Sports</span>
+                    <br>
+                    <div class="my-1">
+                      <span class="text-warning h5">₱118.10</span>
+                    </div>
+                    <span style="font-size: 14px;"><del class="text-muted">₱399.00</del>-70%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="container mt-5">
+          <div class="mb-2">
+            <h5>Category</h5>
+          </div>
+
+          <div class="bg-white container-fluid">
+            <div class="row ">
+
+              <div class="col-6 col-md-4 col-lg-2 border d-flex justify-content-center">
+                <div class="d-flex flex-column align-items-center my-3">
+                    <img src="img/mobile.jpg" alt="div Image" style="height:80px;object-fit: cover;">
+                    <h6>Mobiles</h6>
+                </div>
+              </div>
+
+              <div class="col-6 col-md-4 col-lg-2 border d-flex justify-content-center">
+                <div class="d-flex flex-column align-items-center my-3">
+                    <img src="img/lighting.jpg" alt="div Image" style="height:80px;object-fit: cover;">
+                    <h6>Outdoor Lighting</h6>
+                </div>
+              </div>
+
+              <div class="col-6 col-md-4 col-lg-2 border d-flex justify-content-center">
+                <div class="d-flex flex-column align-items-center my-3">
+                    <img src="img/men-t-shirt.jpg" alt="div Image" style="height:80px;object-fit: cover;">
+                    <h6>Men's T-Shirt</h6>
+                </div>
+              </div>
+
+              <div class="col-6 col-md-4 col-lg-2 border d-flex justify-content-center">
+                <div class="d-flex flex-column align-items-center my-3">
+                    <img src="img/baby.jpg" alt="div Image" style="height:80px;object-fit: cover;">
+                    <h6>Baby Diposal Diapers</h6>
+                </div>
+              </div>
+
+              <div class="col-6 col-md-4 col-lg-2 border d-flex justify-content-center">
+                <div class="d-flex flex-column align-items-center my-3">
+                    <img src="img/powerbank.jpg" alt="div Image" style="height:80px;object-fit: cover;">
+                    <h6>Power Bank</h6>
+                </div>
+              </div>
+
+              <div class="col-6 col-md-4 col-lg-2 border d-flex justify-content-center">
+                <div class="d-flex flex-column align-items-center my-3">
+                    <img src="img/earpuds.jpg" alt="div Image" style="height:80px;object-fit: cover;">
+                    <h6>Ear Buds</h6>
+                </div>
+              </div>
+
+              <div class="col-6 col-md-4 col-lg-2 border d-flex justify-content-center">
+                <div class="d-flex flex-column align-items-center my-3">
+                    <img src="img/electrical.jpg" alt="div Image" style="height:80px;object-fit: cover;">
+                    <h6>Electrical Circuitry & Parts</h6>
+                </div>
+              </div>
+
+              <div class="col-6 col-md-4 col-lg-2 border d-flex justify-content-center">
+                <div class="d-flex flex-column align-items-center my-3">
+                    <img src="img/bluetooth.jpg" alt="div Image" style="height:80px;object-fit: cover;">
+                    <h6>Wireless and Bluetooth</h6>
+                </div>
+              </div>
+
+              <div class="col-6 col-md-4 col-lg-2 border d-flex justify-content-center">
+                <div class="d-flex flex-column align-items-center my-3">
+                    <img src="img/dress.png" alt="div Image" style="height:80px;object-fit: cover;">
+                    <h6>Women's Dress</h6>
+                </div>
+              </div>
+
+              <div class="col-6 col-md-4 col-lg-2 border d-flex justify-content-center">
+                <div class="d-flex flex-column align-items-center my-3">
+                    <img src="img/camera.jpg" alt="div Image" style="height:80px;object-fit: cover;">
+                    <h6>IP Security Cameras</h6>
+                </div>
+              </div>
+
+              <div class="col-6 col-md-4 col-lg-2 border d-flex justify-content-center">
+                <div class="d-flex flex-column align-items-center my-3">
+                    <img src="img/curtains.jpg" alt="div Image" style="height:80px;object-fit: cover;">
+                    <h6>Draperies and Curtains</h6>
+                </div>
+              </div>
+
+              <div class="col-6 col-md-4 col-lg-2 border d-flex justify-content-center">
+                <div class="d-flex flex-column align-items-center my-3">
+                    <img src="img/tablet.jpg" alt="div Image" style="height:80px;object-fit: cover;">
+                    <h6>Tablets</h6>
+                </div>
+              </div>
+          </div>
+        </section>
+
+
+        <section class="container mt-5">
+          <div class="mb-2">
+            <h5>Just For You</h5>
+          </div>
+
+          <div class="bg-white container-fluid pt-3">
+            <div class="row ">
+              <div class="col-6 col-md-4 col-lg-2">
+                <div class="shop-card">
+                    <img src="img/pool.jpg" alt="div Image" style="height:200px;width: 100%;object-fit: cover;">
+                    <span class="text-justify">120cm /150cm Swimming Pool Kids Mura Lang Mini </span>
+                    <br>
+                    <div class="my-1">
+                      <span class="text-warning h5">₱362.39</span>
+                    </div>
+                    <span style="font-size: 14px;"><del class="text-muted">₱1,199.00</del>-70%</span>
+                    <div>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <span class="text-muted" style="font-size: 12px;">(5715)</span>
+                    </div>
+                </div>
+              </div>
+  
+              <div class="col-6 col-md-4 col-lg-2">
+                <div class="shop-card">
+                    <img src="img/blouse.jpg" alt="div Image" style="height:200px;width: 100%;object-fit: cover;">
+                    <span class="text-justify">Blouse For Women Short Sleeved T-shirt For</span>
+                    <br>
+                    <div class="my-1">
+                      <span class="text-warning h5">₱142.20</span>
+                    </div>
+                    <span style="font-size: 14px;"><del class="text-muted">₱399.00</del>-64%</span>
+                    <div>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <span class="text-muted" style="font-size: 12px;">(5715)</span>
+                    </div>
+                </div>
+              </div>
+  
+              <div class="col-6 col-md-4 col-lg-2">
+                <div class="shop-card">
+                    <img src="img/pool2.jpg" alt="div Image" style="height:200px;width: 100%;object-fit: cover;">
+                    <span class="text-justify">Outdoor pool children adult family swimming </span>
+                    <br>
+                    <div class="my-1">
+                      <span class="text-warning h5">₱315.00</span>
+                    </div>
+                    <span style="font-size: 14px;"><del class="text-muted">₱699.00</del>-55%</span>
+                    <div>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <span class="text-muted" style="font-size: 12px;">(5715)</span>
+                    </div>
+                </div>
+              </div>
+
+              <div class="col-6 col-md-4 col-lg-2">
+                <div class="shop-card">
+                    <img src="img/portable.jpg" alt="div Image" style="height:200px;width: 100%;object-fit: cover;">
+                    <span class="text-justify">Portable 'K1' Bluetooth Wireless Rechargeable</span>
+                    <br>
+                    <div class="my-1">
+                      <span class="text-warning h5">₱24.07</span>
+                    </div>
+                    <span style="font-size: 14px;"><del class="text-muted">₱264.00</del>-90%</span>
+                    <div>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <span class="text-muted" style="font-size: 12px;">(5715)</span>
+                    </div>
+                </div>
+              </div>
+
+              <div class="col-6 col-md-4 col-lg-2 ">
+                <div class="shop-card">
+                    <img src="img/fan.jpg" alt="div Image" style="height:200px;width: 100%;object-fit: cover;">
+                    <span class="text-justify">Foldable Telescopic Desk Electric Fan Mini Folding </span>
+                    <br>
+                    <div class="my-1">
+                      <span class="text-warning h5">₱64.90</span>
+                    </div>
+                    <span style="font-size: 14px;"><del class="text-muted">₱289.00</del>-78%</span>
+                    <div>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <span class="text-muted" style="font-size: 12px;">(5715)</span>
+                    </div>
+                </div>
+              </div>
+
+              <div class="col-6 col-md-4 col-lg-2">
+                <div class="shop-card">
+                    <img src="img/slippers.jpg" alt="div Image" style="height:200px;width: 100%;object-fit: cover;">
+                    <span class="text-justify">𝐂𝐋𝐎𝐒𝐒.𝐏𝐇 Summer Fashion Men's Sports</span>
+                    <br>
+                    <div class="my-1">
+                      <span class="text-warning h5">₱118.10</span>
+                    </div>
+                    <span style="font-size: 14px;"><del class="text-muted">₱399.00</del>-70%</span>
+                    <div>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <span class="text-muted" style="font-size: 12px;">(5715)</span>
+                    </div>
+                </div>
+              </div>
+
+              <div class="col-6 col-md-4 col-lg-2">
+                <div class="shop-card">
+                    <img src="img/socks.jpg" alt="div Image" style="height:200px;width: 100%;object-fit: cover;">
+                    <span class="text-justify">Korean Unisex Toe Cotton Socks 1pair</span>
+                    <br>
+                    <div class="my-1">
+                      <span class="text-warning h5">₱19.00</span>
+                    </div>
+                    <span style="font-size: 14px;"><del class="text-muted">₱199.00</del>-90%</span>
+                    <div>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <span class="text-muted" style="font-size: 12px;">(5715)</span>
+                    </div>
+                </div>
+              </div>
+
+              <div class="col-6 col-md-4 col-lg-2">
+                <div class="shop-card">
+                    <img src="img/earphone.jpg" alt="div Image" style="height:200px;width: 100%;object-fit: cover;">
+                    <span class="text-justify">TWS Pro 6 Earphone Wireless Bluetooth</span>
+                    <br>
+                    <div class="my-1">
+                      <span class="text-warning h5">₱75.00</span>
+                    </div>
+                    <span style="font-size: 14px;"><del class="text-muted">₱174.00</del>-57%</span>
+                    <div>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <span class="text-muted" style="font-size: 12px;">(5715)</span>
+                    </div>
+                </div>
+              </div>
+
+              <div class="col-6 col-md-4 col-lg-2">
+                <div class="shop-card">
+                    <img src="img/gloves-arm.jpg" alt="div Image" style="height:200px;width: 100%;object-fit: cover;">
+                    <span class="text-justify">Summer sunscreen gloves male ice silk arm guards</span>
+                    <br>
+                    <div class="my-1">
+                      <span class="text-warning h5">₱15.00</span>
+                    </div>
+                    <span style="font-size: 14px;"><del class="text-muted">₱100.00</del>-85%</span>
+                    <div>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <span class="text-muted" style="font-size: 12px;">(5715)</span>
+                    </div>
+                </div>
+              </div>
+
+              <div class="col-6 col-md-4 col-lg-2">
+                <div class="shop-card">
+                    <img src="img/tumbler.jpg" alt="div Image" style="height:200px;width: 100%;object-fit: cover;">
+                    <span class="text-justify">REKD 【1000ML】Tumbler water bottle Travel</span>
+                    <br>
+                    <div class="my-1">
+                      <span class="text-warning h5">₱140.00</span>
+                    </div>
+                    <span style="font-size: 14px;"><del class="text-muted">₱999.00</del>-86%</span>
+                    <div>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <span class="text-muted" style="font-size: 12px;">(5715)</span>
+                    </div>
+                </div>
+              </div>
+
+              <div class="col-6 col-md-4 col-lg-2">
+                <div class="shop-card">
+                    <img src="img/watch.jpg" alt="div Image" style="height:200px;width: 100%;object-fit: cover;">
+                    <span class="text-justify">Quartz Watch For Men Silicone Strap</span>
+                    <br>
+                    <div class="my-1">
+                      <span class="text-warning h5">₱45.50</span>
+                    </div>
+                    <span style="font-size: 14px;"><del class="text-muted">₱117.00</del>-61%</span>
+                    <div>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <span class="text-muted" style="font-size: 12px;">(5715)</span>
+                    </div>
+                </div>
+              </div>
+
+              <div class="col-6 col-md-4 col-lg-2">
+                <div class="shop-card">
+                    <img src="img/greentea.jpg" alt="div Image" style="height:200px;width: 100%;object-fit: cover;">
+                    <span class="text-justify">BUY 1 TAKE 1 GREEN TEA CLEANSING SOLID MASK</span>
+                    <br>
+                    <div class="my-1">
+                      <span class="text-warning h5">₱36.00</span>
+                    </div>
+                    <span style="font-size: 14px;"><del class="text-muted">₱92.00</del>-61%</span>
+                    <div>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <span class="text-muted" style="font-size: 12px;">(5715)</span>
+                    </div>
+                </div>
+              </div>
+
+              <div class="col-6 col-md-4 col-lg-2">
+                <div class="shop-card">
+                    <img src="img/sandals.jpg" alt="div Image" style="height:200px;width: 100%;object-fit: cover;">
+                    <span class="text-justify">KOREAN SANDALS FOR WOMEN SHUTA</span>
+                    <br>
+                    <div class="my-1">
+                      <span class="text-warning h5">₱105.00</span>
+                    </div>
+                    <span style="font-size: 14px;"><del class="text-muted">₱219.00</del>-52%</span>
+                    <div>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <span class="text-muted" style="font-size: 12px;">(5715)</span>
+                    </div>
+                </div>
+              </div>
+
+              <div class="col-6 col-md-4 col-lg-2">
+                <div class="shop-card">
+                    <img src="img/organizer.jpg" alt="div Image" style="height:200px;width: 100%;object-fit: cover;">
+                    <span class="text-justify">4 layer mini rack organizer</span>
+                    <br>
+                    <div class="my-1">
+                      <span class="text-warning h5">₱58.11</span>
+                    </div>
+                    <span style="font-size: 14px;"><del class="text-muted">₱65.00</del>-11%</span>
+                    <div>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <span class="text-muted" style="font-size: 12px;">(5715)</span>
+                    </div>
+                </div>
+              </div>
+
+              <div class="col-6 col-md-4 col-lg-2">
+                <div class="shop-card">
+                    <img src="img/perfume.jpg" alt="div Image" style="height:200px;width: 100%;object-fit: cover;">
+                    <span class="text-justify">PHIO2O perfume long-lasting fragrance</span>
+                    <br>
+                    <div class="my-1">
+                      <span class="text-warning h5">₱52.20</span>
+                    </div>
+                    <span style="font-size: 14px;"><del class="text-muted">₱124.20</del>-56%</span>
+                    <div>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <span class="text-muted" style="font-size: 12px;">(5715)</span>
+                    </div>
+                </div>
+              </div>
+
+              <div class="col-6 col-md-4 col-lg-2">
+                <div class="shop-card">
+                    <img src="img/tsinelas.jpg" alt="div Image" style="height:200px;width: 100%;object-fit: cover;">
+                    <span class="text-justify">square cut slim slippers havaianas</span>
+                    <br>
+                    <div class="my-1">
+                      <span class="text-warning h5">₱99.20</span>
+                    </div>
+                    
+                    <div>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <span class="text-muted" style="font-size: 12px;">(5715)</span>
+                    </div>
+                </div>
+              </div>
+
+              <div class="col-6 col-md-4 col-lg-2">
+                <div class="shop-card">
+                    <img src="img/longcurly.jpg" alt="div Image" style="height:200px;width: 100%;object-fit: cover;">
+                    <span class="text-justify">50CM Long Curly Claw Ponytail <br> Fashion Women</span>
+                    <br>
+                    <div class="my-1">
+                      <span class="text-warning h5">₱84.00</span>
+                    </div>
+                    <span style="font-size: 14px;"><del class="text-muted">₱459.00</del>-82%</span>
+                    <div>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <span class="text-muted" style="font-size: 12px;">(5715)</span>
+                    </div>
+                </div>
+              </div>
+
+              <div class="col-6 col-md-4 col-lg-2">
+                <div class="shop-card">
+                    <img src="img/paintmarkers.jpg" alt="div Image" style="height:200px;width: 100%;object-fit: cover;">
+                    <span class="text-justify">50CM Long Curly Claw Ponytail <br> Fashion Women</span>
+                    <br>
+                    <div class="my-1">
+                      <span class="text-warning h5">₱67.00</span>
+                    </div>
+                    <span style="font-size: 14px;"><del class="text-muted">₱299.00</del>-77%</span>
+                    <div>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <i class="fa-solid fa-star text-warning" style="font-size: 12px;"></i>
+                      <span class="text-muted" style="font-size: 12px;">(5715)</span>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="d-flex justify-content-center align-items-center mt-5 pb-5">
+            <button class="btn btn-lg btn-outline-primary" style="border-radius: 0px;">Load More</button>
+          </div>
+        </section>
+
+        <footer class="bg-white py-3">
+          <div class="container">
+            <div class="row">
+
+              <div class="col">
+                <ul class="list-group">
+                  <li class="list-group-item text-primary" style="border: none;font-size: 16px;">Customer Care</li>
+                  <li class="list-group-item" style="border: none;font-size: 12px;line-height: 5px;"><a href="#">Help Center</a></li>
+                  <li class="list-group-item" style="border: none;font-size: 12px;line-height: 5px;"><a href="#">How to buy</a></li>
+                  <li class="list-group-item" style="border: none;font-size: 12px;line-height: 5px;"><a href="#">Shipping & Delivery</a></li>
+                  <li class="list-group-item" style="border: none;font-size: 12px;line-height: 5px;"><a href="#">International Product Policy</a></li>
+                  <li class="list-group-item" style="border: none;font-size: 12px;line-height: 5px;"><a href="#">How to return</a></li>
+                  <li class="list-group-item" style="border: none;font-size: 12px;line-height: 5px;"><a href="#">Question</a></li>
+                </ul>
+              </div>
+
+              <div class="col">
+                <ul class="list-group">
+                  <li class="list-group-item text-primary" style="border: none;font-size: 16px;">Lazada</li>
+                  <li class="list-group-item" style="border: none;font-size: 12px;line-height: 5px;"><a href="#">About Lazada</a></li>
+                  <li class="list-group-item" style="border: none;font-size: 12px;line-height: 5px;"><a href="#">Affiliate Program</a></li>
+                  <li class="list-group-item" style="border: none;font-size: 12px;line-height: 5px;"><a href="#">Affiliate Academy</a></li>
+                  <li class="list-group-item" style="border: none;font-size: 12px;line-height: 5px;"><a href="#">Careers</a></li>
+                  <li class="list-group-item" style="border: none;font-size: 12px;line-height: 5px;"><a href="#">Terms & Condition</a></li>
+                  <li class="list-group-item" style="border: none;font-size: 12px;line-height: 5px;"><a href="#">Privacy & Media</a></li>
+                  <li class="list-group-item" style="border: none;font-size: 12px;line-height: 5px;"><a href="#">Intellectual Property Protection</a></li>
+                </ul>
+              </div>
+
+              <div class="col">
+                <div>
+                  <img class="" src="img/logoandlazada.png" height="40px" >
+                  <h6 class="text-success">Go where your heart beats</h6>
+                  <h6 class="text-primary">Download the App</h6>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </footer>
+
+
+    </main>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    
+    <script>
+      // Set the initial time for the countdown (11:59:59)
+      let hours = 11;
+      let minutes = 59;
+      let seconds = 59;
+  
+      // Update the countdown every second
+      const countdown = document.getElementById('countdown');
+      const countdownInterval = setInterval(updateCountdown, 1000);
+  
+      function updateCountdown() {
+          // Format the time as HH:MM:SS
+          const formattedTime = padZero(hours) + ' : ' + padZero(minutes) + ' : ' + padZero(seconds);
+  
+          // Update the countdown display
+          countdown.textContent = formattedTime;
+  
+          // Decrease the time by 1 second
+          if (seconds > 0) {
+              seconds--;
+          } else {
+              if (minutes > 0) {
+                  minutes--;
+                  seconds = 59;
+              } else {
+                  if (hours > 0) {
+                      hours--;
+                      minutes = 59;
+                      seconds = 59;
+                  } else {
+                      // Countdown has reached 00:00:00, stop the countdown
+                      clearInterval(countdownInterval);
+                  }
+              }
+          }
+      }
+  
+      function padZero(number) {
+          return (number < 10 ? '0' : '') + number;
+      }
+  
+      // Call updateCountdown once to initialize the display
+      updateCountdown();
+    </script>
+</body>
+</html>
